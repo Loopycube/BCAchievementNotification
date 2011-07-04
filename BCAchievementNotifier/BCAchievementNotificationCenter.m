@@ -269,7 +269,7 @@
 	
 	// Reset the transform so we can set the size
 	_containerWindow.layer.affineTransform = CGAffineTransformIdentity;
-	_containerWindow.frame = (CGRect){0,0,f.size};
+	_containerWindow.frame = (CGRect){{0,0},f.size};
 	
 	// Revert to the previous transform for correct animation
 	_containerWindow.layer.affineTransform = previousTransform;
@@ -281,7 +281,7 @@
 	_containerWindow.layer.affineTransform = newTransform;
 	
 	// Fix the view origin
-	_containerWindow.frame = (CGRect){f.origin.x,f.origin.y,_containerWindow.frame.size};
+	_containerWindow.frame = (CGRect){{f.origin.x,f.origin.y},_containerWindow.frame.size};
     [UIView commitAnimations];
 }
 
@@ -323,7 +323,7 @@
 	
 	// Reset the transform so we can set the size
 	_containerWindow.layer.affineTransform = CGAffineTransformIdentity;
-	_containerWindow.frame = (CGRect){0,0,f.size};
+	_containerWindow.frame = (CGRect){{0,0},f.size};
 	
 	// Revert to the previous transform for correct animation
 	_containerWindow.layer.affineTransform = previousTransform;
@@ -335,7 +335,7 @@
 	_containerWindow.layer.affineTransform = newTransform;
 	
 	// Fix the view origin
-	_containerWindow.frame = (CGRect){f.origin.x,f.origin.y,f.size.width, f.size.height};
+	_containerWindow.frame = (CGRect){{f.origin.x,f.origin.y},{f.size.width, f.size.height}};
 //    [UIView commitAnimations];
 }
 
