@@ -88,8 +88,6 @@
 
 - (void)dealloc
 {
-	[iconView release];
-    
     [achievementDescription release];
     [backgroundView release];
     [detailLabel release];

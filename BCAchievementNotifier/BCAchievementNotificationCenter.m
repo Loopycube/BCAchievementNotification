@@ -69,6 +69,7 @@
 											  }
 											  else
 												  _containerWindow.hidden = YES;
+                        [notification removeFromSuperview];
 										  }];
 					 }];
 }
